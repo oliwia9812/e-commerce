@@ -1,0 +1,149 @@
+.nav {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   grid-template-rows:auto 1fr;
+   align-items: center;
+   padding: 5px;
+}
+
+.navLinks {
+    display: none;
+}
+
+.navMobileMenuButton {
+   height: 1.5rem;
+   width: 1.5rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   z-index: 10;
+   position: relative;
+}
+
+.navMobileMenu {
+    display: block;
+    height: 0.125rem;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+    transition: transform .4s cubic-bezier(0.22, 1, 0.36, 1);
+    -webkit-transition: transform .4s cubic-bezier(0.22, 1, 0.36, 1);
+    -webkit-transition: -webkit-transform .4s cubic-bezier(0.22, 1, 0.36, 1);
+    
+}
+
+.isOpen {
+    @extend .navMobileMenu;
+
+    &:nth-of-type(1) {
+        position: absolute;
+        transform: rotate(45deg);
+        top: 10px;
+        
+    }
+
+    &:nth-of-type(2) {
+        opacity: 0;
+       
+    }
+
+    &:nth-of-type(3) {
+        position: absolute;
+        top: 10px;
+        transform: rotate(-45deg);
+
+    }
+
+}
+
+.logo {
+    width: 8.625rem;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: .1rem;
+}
+
+.navActions {
+    display: flex;
+    align-items:baseline;
+    justify-self: flex-end;
+}
+
+.navLink {
+    padding-right: 1.5rem;
+    text-transform: uppercase;
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+.searchInput {
+    display: none;
+}
+
+.searchIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+.cartIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+.cartBtn {
+    display: flex;
+    align-items: center;
+    margin-left: .6rem;
+    align-self: center;
+
+    span {
+        display: none;
+        font-size: 1rem;
+    }
+}
+
+.navMobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: aliceblue;
+    
+}
+
+
+/* LARGE */
+@media screen and (min-width: 64rem){
+    .logo {
+        width: 13.625rem;
+        margin-bottom: 0rem;
+    }
+
+    .navLinks {
+        display: block;
+        width: 100%;
+    }
+
+    .navMobileMenuButton {
+        display: none;
+    }
+
+    .cartBtn {
+
+        span {
+            display: block;
+            font-size: 1rem;
+        }
+    }
+}
