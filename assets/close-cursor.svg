@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <rect id="bottom-top" fill="#FFF" fill-rule="nonzero" transform="translate(9.999992, 9.835833) rotate(-45.000000) translate(-9.999992, -9.835833) " x="-1.77165991" y="8.99499823" width="23.5433035" height="1.68167025" rx="0.840833"></rect>
+    <rect id="top-bottom" fill="#FFF" fill-rule="nonzero" transform="translate(9.999939, 10.163641) rotate(45.000000) translate(-9.999939, -10.163641) " x="-1.77171262" y="9.32280617" width="23.5433035" height="1.68167025" rx="0.840833"></rect>
+  </g>
+</svg>

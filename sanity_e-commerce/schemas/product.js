@@ -5,10 +5,12 @@ export default {
     fields: [
         {
             name: 'image',
-            type: 'string',
-            title: 'array',
-            of: [{type: 'image'}],
-            hotspot: true
+            title: 'Image',
+            type: 'array',
+            of: [{ type: 'image'}],
+            options: {
+                hotspot: true
+            }
         },
         {
             name: 'name',
