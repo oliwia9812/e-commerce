@@ -8,10 +8,11 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+
 h2 {
   text-align: center;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.75rem;
+  font-size: 1.375rem;
   color: #333;
   margin-bottom: 1.5rem;
 }
@@ -40,12 +41,16 @@ button:hover {
 
 /* MEDIUM */
 @media screen and (min-width: 48rem){
-  
+  h2 {
+    font-size: 1.5rem;
+  }
 }
 
 /* LARGE */
 @media screen and (min-width: 64rem){
-  
+  h2 {
+    font-size: 1.75rem;
+  }
 }
 
 /* XLARGE */

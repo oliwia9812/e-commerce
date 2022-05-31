@@ -1,14 +1,20 @@
 import { client } from '../lib/client' ;
 import Hero from '../components/Hero/Hero';
 import Bestsellers from '../components/Bestsellers/Bestsellers';
+import About from '../components/About/About'
+import Features from '../components/Features/Features';
+import Social from '../components/Social/Social';
 
 export default function Home({bannerData, products}) {
 
   return (
-    <>
-      <Hero heroBannerData={bannerData.length && bannerData[0]} />
-      <Bestsellers products={products} />
-    </>
+    <div>
+        <Hero heroBannerData={bannerData.length && bannerData[0]} />
+        <About />
+        <Bestsellers products={products} />
+        <Features />
+        <Social />
+    </div>
   )
 }
 

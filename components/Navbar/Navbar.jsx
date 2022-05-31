@@ -38,7 +38,7 @@ const Navbar = () => {
 
                 <div className={styles.navLinks}>
                     <Link href='/shop'>
-                        <a className={styles.navLink}>Shop</a>
+                        <a className={styles.navLink}>Shop all</a>
                     </Link>
                     <Link href='/about'>
                         <a className={styles.navLink}>About</a>
@@ -46,13 +46,13 @@ const Navbar = () => {
                     <Link href='/contact'>
                         <a className={styles.navLink}>Contact</a>
                     </Link>
-                    <Link className={styles.navLink} href='/blog'>
+                    <Link href='/blog'>
                         <a className={styles.navLink}>Blog</a>
                     </Link>
                 </div>
 
                 <Link href='/'>
-                    <img className={styles.logo} src={Logo.src} />
+                    <img onClick={ isOpen && handleOpen} className={styles.logo} src={Logo.src} />
                 </Link>
 
                 <div className={styles.navActions}>
@@ -62,8 +62,27 @@ const Navbar = () => {
                         <span>({totalQuantities})</span>
                     </div>
                 </div>
-                {isOpen &&  <div className={styles.navMobile}></div> }
+               
             </nav>
+            {isOpen &&  <div className={styles.navMobile}>
+                <div className={styles.navMobileContent}>
+                    <div className={styles.mobileNavLinks}>
+                        <Link href='/shop'>
+                            <a onClick={ handleOpen} className={styles.mobileNavLink}>Shop all</a>
+                        </Link>
+                
+                        <Link href='/about'>
+                            <a onClick={ handleOpen} className={styles.mobileNavLink}>About</a>
+                        </Link>
+                        <Link href='/contact'>
+                            <a onClick={ handleOpen} className={styles.mobileNavLink}>Contact</a>
+                        </Link>
+                        <Link href='/blog'>
+                            <a onClick={ handleOpen} className={styles.mobileNavLink}>Blog</a>
+                        </Link>
+                    </div>
+                </div>
+            </div> }
             {isSearching && <div className={styles.searchBar}>
                 <div className={styles.searchContainer}>
                     <IoSearchOutline className={styles.icon} />

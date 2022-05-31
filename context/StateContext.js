@@ -5,6 +5,7 @@ const Context = createContext();
 
 export const StateProvider = ({children}) => {
     const [ showCart, setShowCart ] = useState(false);
+    const [ showPromobar, setShowPromobar] = useState(true);
     const [ totalQuantities, setTotalQuantities ] = useState(0);
 
     return (

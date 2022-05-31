@@ -11,9 +11,7 @@ const Layout = ({ children }) => {
         <Head>
             <title>Loomipaper - planners</title>
         </Head>
-        <header>
-          <Navbar />
-        </header>
+        <Navbar />
         <main className='main-container'>
             {children}
         </main>

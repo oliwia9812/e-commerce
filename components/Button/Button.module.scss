@@ -12,6 +12,18 @@
     }
 }
 
+.buttonOutline {
+    @extend .button;
+    background-color: transparent;
+    border: 1px solid #F3D5C1;
+    color: #F3D5C1;
+
+    &:hover {
+        background-color: #F3D5C1;
+        color: white;
+    }
+}
+
 @media screen and (min-width: 48rem){
   .button {
       width: fit-content;

@@ -1,8 +1,8 @@
 import styles from './Button.module.scss';
 
-const Button = ({ textButton }) => {
+const Button = ({ textButton, outline }) => {
     return (
-        <button className={styles.button} type='button'> { textButton} </button>
+        <button className={ outline ? styles.buttonOutline : styles.button } type='button'> { textButton} </button>
     )
 }
 

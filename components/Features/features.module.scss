@@ -1,0 +1,81 @@
+.features {
+    margin: 3rem 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fffbf8;
+    padding: 3rem 1rem;
+    color: #333;
+}
+
+.image {
+    height: 50vh;
+    width: 100%; 
+    object-fit: cover;
+        object-position: 100 0;
+}
+
+.title {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.listTitle {
+    margin-bottom: .5rem;
+}
+
+.featuresList {
+    list-style-type:circle;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.feature {
+line-height: 1.4rem;
+}
+
+.textButton {
+    color: #F3D5C1;
+    text-decoration: underline;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+/* MEDIUM */
+@media screen and (min-width: 48rem){
+    .features {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image {
+        height: auto;
+        width: 40%; 
+    }
+
+    .contentWrapper {
+        padding-left: 2rem;
+    }
+}
+  
+  /* LARGE */
+  @media screen and (min-width: 64rem){
+    .image {
+        height: 40vh;
+        width: 40%; 
+        
+    }
+
+  }
+  
+  /* XLARGE */
+  @media screen and (min-width: 87.5rem){
+    .image {
+        height: 40vh;
+        width: 20%; 
+       
+    }
+  }

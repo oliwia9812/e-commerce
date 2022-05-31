@@ -1,0 +1,29 @@
+.about {
+    margin: 3rem 0;
+    height: 30vh;
+    padding: 0 2rem;
+    background-color: #fffbf8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    & > h2 {
+        font-size: 1.75rem;
+    }
+
+    & > p {
+        font-size: .875rem;
+        line-height: 1.6rem;
+    }
+}
+
+  
+  /* XLARGE */
+  @media screen and (min-width: 87.5rem){
+      .about {
+        padding: 0 25%
+    }
+   
+  }
