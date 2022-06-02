@@ -1,13 +1,13 @@
 .button {
     padding: 1rem 2rem;
-    background-color: #F3D5C1;
+    background-color: #333;
     color: white;
     font-size: .75rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 
     &:hover {
-        background-color: #333;
+        background-color: #F3D5C1;
         color: white;
     }
 }
@@ -15,11 +15,11 @@
 .buttonOutline {
     @extend .button;
     background-color: transparent;
-    border: 1px solid #F3D5C1;
-    color: #F3D5C1;
+    border: 1px solid #333;
+    color: #333;
 
     &:hover {
-        background-color: #F3D5C1;
+        background-color: #333;
         color: white;
     }
 }

@@ -8,7 +8,7 @@ const Bestsellers = ({ products }) => {
         <section className={styles.bestsellers}>  
             <h2>Bestsellers</h2>
             <div className={styles.container}>
-            {products.length >= 1 && products.map((product, idx) => (
+            {products.length >= 1 && products.map((product) => (
                 <div key={product._id} className={styles.product}>
                     <div className={styles.imageContainer}>
                         <img src={urlFor(product?.image[0])} className={styles.image}/>

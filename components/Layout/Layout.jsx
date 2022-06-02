@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import styles from './Layout.module.scss';
+import Newsletter from '../Newsletter/Newsletter';
 
 
 const Layout = ({ children }) => {
@@ -16,6 +17,7 @@ const Layout = ({ children }) => {
             {children}
         </main>
         <footer>
+          <Newsletter />
           <Footer />
         </footer>
       </div>

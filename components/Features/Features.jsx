@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 const Features = () => {
 
-    console.log(image.src)
     return (
         <section className={styles.features}>
             <img className={styles.image} src={image.src} />

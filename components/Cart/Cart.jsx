@@ -2,10 +2,18 @@ import styles from './Cart.module.scss';
 import { IoCloseOutline, IoCartOutline } from 'react-icons/io5';
 import {useStateContext } from '../../context/StateContext';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 const Cart = () => {
 
-    const { showCart, setShowCart, totalQuantities } = useStateContext()
+    const { showCart, setShowCart, totalQuantities } = useStateContext();
+
+
+    useEffect(() => {
+        document.body.style.overflow = 'hidden';
+        return () => document.body.style.overflow = 'unset';
+    }, [])
+   
 
     return (
         <>

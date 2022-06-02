@@ -4,16 +4,18 @@ import Bestsellers from '../components/Bestsellers/Bestsellers';
 import About from '../components/About/About'
 import Features from '../components/Features/Features';
 import Social from '../components/Social/Social';
+import Newsletter from '../components/Newsletter/Newsletter';
 
-export default function Home({bannerData, products}) {
+export default function Home({bannerData, bestsellerProducts}) {
 
   return (
     <div>
         <Hero heroBannerData={bannerData.length && bannerData[0]} />
         <About />
-        <Bestsellers products={products} />
+        <Bestsellers products={bestsellerProducts} />
         <Features />
         <Social />
+
     </div>
   )
 }
@@ -21,12 +23,12 @@ export default function Home({bannerData, products}) {
 
 export const getServerSideProps = async () => {
     const bannerData = await client.fetch(`*[_type == "heroBanner"]`);
-    const products = await client.fetch(`*[_type == "product"]`);
+    const bestsellerProducts = await client.fetch(`*[_type == "product" && category == "bestseller"]`);
 
     return {
       props: {
         bannerData,
-        products
+        bestsellerProducts
       }
     }
 }

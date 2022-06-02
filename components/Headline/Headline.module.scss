@@ -1,0 +1,77 @@
+.headline {
+    height: 30vh;
+    width: 100vw;
+    position: relative;
+
+    &__content {
+        position: absolute;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 400;
+        top: 60%;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 0 100%;
+       
+    }
+
+    &__title {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+/* MEDIUM */
+@media screen and (min-width: 48rem){
+    .headline { 
+
+        &__content {
+            top: 65%;
+            
+        }
+
+        &__image {
+            object-position: 0 100%;
+        }
+        
+    }
+  }
+  
+  /* LARGE */
+  @media screen and (min-width: 64rem){
+
+    .headline { 
+
+    &__content {
+        left: 3rem;
+        bottom: -6rem;
+        font-size: 1.225rem;
+        max-width: 25rem;
+        transform: none;
+        top: auto;
+        text-align: left;
+    }
+
+        &__image {
+            object-position: 0 80%;
+        }
+    
+        &__title {
+            transform: none;
+            top: auto;
+            bottom: 1rem;
+            left: 3rem;
+        }
+    }
+  }
