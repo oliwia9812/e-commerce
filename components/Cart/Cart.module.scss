@@ -6,7 +6,7 @@
     right: 0;
     top: 0;
     padding: 2rem;
-    z-index: 10;
+    z-index: 20;
 }
 
 .header {
@@ -50,6 +50,7 @@
     bottom: 0;
     left: 0;
     background-color: rgba(55, 54, 54, 0.15);
+    z-index: 1;
 
     &:hover {
         cursor: url('../../assets/close-cursor.svg'), auto;

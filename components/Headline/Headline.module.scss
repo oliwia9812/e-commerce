@@ -1,17 +1,19 @@
 .headline {
-    height: 30vh;
+    height: 15rem;
     width: 100vw;
     position: relative;
 
     &__content {
         position: absolute;
         font-family: 'Cormorant Garamond', serif;
-        font-weight: 400;
+        font-weight: 600;
         top: 60%;
         text-align: center;
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
+        color: #fff;
+
     }
 
     &__image {
@@ -35,10 +37,10 @@
 /* MEDIUM */
 @media screen and (min-width: 48rem){
     .headline { 
+        height: 18rem;
 
         &__content {
-            top: 65%;
-            
+            top: 60%; 
         }
 
         &__image {
@@ -52,6 +54,7 @@
   @media screen and (min-width: 64rem){
 
     .headline { 
+        height: 25rem;
 
     &__content {
         left: 3rem;
@@ -61,6 +64,8 @@
         transform: none;
         top: auto;
         text-align: left;
+        font-weight: 400;
+        color: #333;
     }
 
         &__image {

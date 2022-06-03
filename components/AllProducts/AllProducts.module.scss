@@ -8,7 +8,55 @@
 
 .container {
     width: fit-content;
+    position: relative;
 }
+
+.sortButton {
+    position: absolute;
+    top: -5rem;
+    left: 0rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.popover {
+    position: absolute;
+    top: -2.5rem;
+    left: -2rem;
+    z-index: 20;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 1px 1px 2.6px;
+    margin-left: 1rem;
+
+    &__content {
+        padding: 1rem;
+    }
+
+    &__messageWrapper {
+        list-style-type: none;
+    }
+
+    &__message {
+        font-family: 'Cormorant Garamond', serif;
+        margin: 1.5rem;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: .1rem;
+        left: 3rem;
+        width: 0;
+        height: 0;
+        border: .6rem solid black;
+        border-color: transparent transparent #ffffff #ffffff;
+        transform-origin: 0 0;
+        transform: rotate(-225deg);
+        box-shadow: -2px 1px 2.6px 0 rgba(0, 0, 0, 0.05);
+    }
+}
+
 
 .product {
     width: 18.75rem;
@@ -41,10 +89,6 @@
         object-fit: cover;
         width: 18.75rem;
         height: 18.75rem;
-
-        &:hover {
-           transform: scale(1.05);
-        }
     }
 
     &__details {
@@ -67,6 +111,24 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
+    .popover {
+        left: -5rem;
+        right: auto;
+        margin-left: auto;
+
+        &::after {
+            content: '';
+            top: .2rem;
+            left: 60%;
+            transform: translateX(-50%);
+            border: .8rem solid black;
+            border-color: transparent transparent #ffffff #ffffff;
+            transform-origin: 0 0;
+            transform: rotate(-225deg);
+        }
+    }
+    
   }
   
   /* LARGE */
@@ -74,6 +136,21 @@
     .container {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .sortButton {
+        position: absolute;
+        left: auto;
+        top: -5rem;
+        right: 3rem;
+        font-size: 1.225rem;
+    }
+
+    .popover {
+        top: -2rem;
+        right: -1.5rem;
+        left: auto;
+    }
+
     .product {
         width: 20rem;
         height: 20rem;
@@ -81,6 +158,12 @@
 
         &__cartIcon {
             right: 1rem;
+        }
+
+        &__image {
+            &:hover {
+                transform: scale(1.05);
+             }
         }
     }
   }
