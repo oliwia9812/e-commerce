@@ -1,7 +1,7 @@
 import React from 'react';
 import Headline from '../components/Headline/Headline';
 import headlineImage from '../assets/headline_about.jpg';
-import styles from './about.module.scss';
+import styles from './styles/about.module.scss';
 import founderImage from '../assets/about_founder.jpg';
 import historyImage from '../assets/about_history.jpg';
 

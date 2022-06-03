@@ -1,0 +1,67 @@
+.contact {
+    padding: 3rem 1rem;
+}
+
+.form {
+    
+    & > button {
+    width: 100%;
+    }
+}
+
+.input, .textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    border: .5px solid rgb(194, 194, 194);
+    border-radius: 0;
+    padding: 0 .5rem;
+    color: #333;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+        
+
+    &::placeholder {
+        font-family: 'Cormorant Garamond', serif;
+        color: #333;
+        font-size: 1rem;
+    }
+}
+
+.input {
+    height: 3rem;
+   
+}
+
+.textarea {
+    padding-top: .5rem;
+    resize: none;
+    height: 12rem;
+}
+
+/* MEDIUM */
+@media screen and (min-width: 48rem){
+    .form {
+        max-width: 65%;
+        margin: 0 auto;
+    }
+}
+  
+  /* LARGE */
+  @media screen and (min-width: 64rem){
+    .contact {
+        padding-top: 10rem;
+    }
+  }
+  
+  /* XLARGE */
+  @media screen and (min-width: 87.5rem){
+
+    .contact {
+        padding-bottom: 6rem;
+    }
+    .form {
+        max-width: 30%;
+    
+    }
+  }

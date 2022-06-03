@@ -6,7 +6,7 @@ const Headline = ({ src, title, content }) => {
             <img className={styles.headline__image} src={src} />
             <h1 className={styles.headline__title}>{title}</h1>
             <p className={styles.headline__content}>{content}</p>
-            
+            <div className={styles.overlay}></div>
         </div>
     )
 }
