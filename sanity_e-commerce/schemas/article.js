@@ -19,13 +19,26 @@ export default {
             title: 'articleBody',
         },
         {
+            name: 'slug',
+            type: 'slug',
+            title: 'Slug',
+            options: {
+                source: 'title',
+                maxLength: 90
+            }
+        },
+        {
+            name: 'category',
+            type: 'string',
+            title: 'Category'
+        },
+        {
             name: 'dateCreated',
             type: 'date',
             title: 'dateCreated',
             options: {
                 dateFormat: 'YYYY-MM-DD'
             }
-        },
-        
+        }
     ]
 }

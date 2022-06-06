@@ -2,7 +2,7 @@ import Logo from '../../assets/Logo.svg';
 import styles from './Navbar.module.scss';
 import Link from 'next/link';
 import { useState } from 'react';
-import { IoSearchOutline, IoBagOutline, IoCloseOutline, IoHeartOutline } from 'react-icons/io5';
+import { IoSearchOutline, IoBagOutline, IoCloseOutline} from 'react-icons/io5';
 import Cart from '../Cart/Cart';
 import { useStateContext } from '../../context/StateContext';
 
@@ -55,7 +55,6 @@ const Navbar = () => {
                 </Link>
 
                 <div className={styles.navActions}>
-                    <IoHeartOutline className={styles.icon} />
                     {isSearching ? <IoCloseOutline onClick={handleSearch} className={styles.icon} /> : <IoSearchOutline onClick={handleSearch} className={styles.icon} /> }
                     <div className={styles.cartBtn} onClick={() => setShowCart(true)}>
                         <IoBagOutline className={styles.icon} />

@@ -1,0 +1,141 @@
+.blog {
+
+   //HEADLINE
+   & > div > img {
+       object-position: 0 64%;
+   }
+}
+
+.articles {
+    padding: 3rem 1rem;
+
+    &__wrapper {
+        margin-top: 3rem;
+    }
+}
+.categories {
+
+    & > p {
+        margin-bottom: 1rem;
+    }
+}
+
+.categoryList {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.article {
+
+    &__imageContainer {
+        width: 100%;
+        height: 20rem;
+    }
+
+    &__image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__content {
+        margin-top: 1rem;
+    }
+
+    &__category {
+        margin-bottom: .5rem;
+        color: #CAB7A3;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: .75rem;
+        letter-spacing: 2px;
+    }
+
+    &__title {
+        text-align: left;
+        font-weight: 400;
+    }
+}
+
+
+
+/* MEDIUM */
+@media screen and (min-width: 48rem){
+     
+     .categories {
+        max-width: fit-content;
+        text-align: center;
+        margin: 0 auto;
+
+         & > ul {
+
+             & > li {
+                 margin-right: 1rem;
+             }
+         }
+     }
+
+     .articles {
+
+        &__wrapper {
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+           gap: 1rem;
+        }
+    }
+
+
+  }
+  
+  /* LARGE */
+  @media screen and (min-width: 64rem){
+
+    .category {
+
+        &:hover {
+            cursor: pointer;
+            color:#CAB7A3;
+        }
+     }
+
+     .articles {
+         padding: 8rem 3rem;
+
+         &__wrapper {
+            grid-template-columns: repeat(3, 1fr);
+         }
+     }
+
+     .article {
+
+        &__imageContainer {
+            overflow: hidden;
+        }
+
+        &__image {
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+     }
+     
+  }
+  
+  /* XLARGE */
+  @media screen and (min-width: 87.5rem){
+    .articles {
+
+        &__wrapper {
+           max-width: 70%;
+           margin-left: auto;
+           margin-right: auto;
+        }
+    }
+  }
