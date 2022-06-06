@@ -1,37 +1,35 @@
 .headline {
+    position: relative;
     height: 15rem;
     width: 100vw;
-    position: relative;
-
-    &__content {
-        position: absolute;
-        font-family: 'Cormorant Garamond', serif;
-        font-weight: 600;
-        top: 60%;
-        text-align: center;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        color: #fff;
-        z-index: 5;
-
-    }
-
+   
     &__image {
         height: 100%;
         width: 100%;
         object-fit: cover;
         object-position: 0 100%;
-       
     }
 
     &__title {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        z-index: 5;
+        transform: translate(-50%, -50%);
         color: #fff;
+    }
+
+    &__content {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        width: 100%;
+        transform: translateX(-50%);
         z-index: 5;
+        text-align: center;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 600;
+        color: #fff;
     }
 
     .overlay {
@@ -45,13 +43,12 @@
 }
 
 
-/* MEDIUM */
 @media screen and (min-width: 48rem){
     .headline { 
         height: 18rem;
 
         &__content {
-            top: 60%; 
+           max-width: 50%;
         }
 
         &__image {
@@ -61,7 +58,7 @@
     }
   }
   
-  /* LARGE */
+
   @media screen and (min-width: 64rem){
 
     .headline { 
@@ -70,10 +67,10 @@
     &__content {
         left: 3rem;
         bottom: -6rem;
-        font-size: 1.225rem;
-        max-width: 25rem;
-        transform: none;
         top: auto;
+        transform: none;
+        max-width: 25rem; 
+        font-size: 1.225rem;
         text-align: left;
         font-weight: 400;
         color: #333;
