@@ -1,9 +1,12 @@
 import styles from './Button.module.scss';
+import React from 'react';
 
-const Button = ({ textButton, outline }) => {
+
+const Button = React.forwardRef(({ onClick, outline, textButton}, ref) => {
+
     return (
-        <button className={ outline ? styles.buttonOutline : styles.button } type='button'> { textButton} </button>
+        <button onClick={onClick} className={ outline ? styles.buttonOutline : styles.button } type='button'> { textButton } </button>
     )
-}
+})
 
 export default Button

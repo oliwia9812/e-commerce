@@ -4,11 +4,14 @@ import Button from '../../components/Button/Button';
 import { urlFor } from "../../lib/client";
 import { useState } from "react";
 import Bestsellers from '../../components/Bestsellers/Bestsellers';
+import { useStateContext } from "../../context/StateContext";
+import { AiOutlineMinus, AiOutlinePlus} from 'react-icons/ai';
 
 const ProductDetails = ({ product, products }) => {
 
     const { name, image, price, details } = product;
     const [ index, setIndex ] = useState(0);
+    const { onAdd, qty, decQty, incQty }  = useStateContext();
 
 
     return (
@@ -17,7 +20,7 @@ const ProductDetails = ({ product, products }) => {
             <div className={styles.imagesWrapper}>
                 {image.length > 1 && <div className={styles.smallImages}>
                     {image?.map((item, i) => (
-                         <div className={styles.smallImageContainer}>
+                         <div key={i} className={styles.smallImageContainer}>
                             <img onMouseOver={()=>setIndex(i)} className={styles.smallImage} src={urlFor(item)} />
                         </div>
                     ))}
@@ -33,13 +36,20 @@ const ProductDetails = ({ product, products }) => {
                         {name}
                     </h2>
                     <p className={styles.productPrice}>
-                        {price} zł
+                        ${price} 
                     </p>
                 </div>
                 <p className={styles.productDesc}>
                    {details}
                 </p>
-                <Button textButton={'Add to cart'}></Button>
+      
+                      <div className={styles.quantityDesc}>
+                          <span className={styles.quantityDesc__minus} onClick={decQty}><AiOutlineMinus /></span>
+                          <span className={styles.quantityDesc__number}>{qty}</span>
+                          <span className={styles.quantityDesc__plus} onClick={incQty}><AiOutlinePlus /></span>
+                      </div>
+    
+                <Button onClick={() => onAdd(product, qty)} textButton={'Add to cart'} />
             </div>
         </section>
         <h2>You may also like</h2>

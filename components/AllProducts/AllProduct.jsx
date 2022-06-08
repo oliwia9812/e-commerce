@@ -3,13 +3,22 @@ import { urlFor } from '../../lib/client';
 import { IoCartOutline } from 'react-icons/io5';
 import { useState } from 'react';
 import Link from 'next/link';
+import { useStateContext } from '../../context/StateContext';
 
 const AllProducts = ({ products }) => {
 
     const [ showPopover, setShowPopover ] = useState(false);
+    const { onAdd } = useStateContext();
+
 
     const handleOpen = () => {
         setShowPopover(prevState => !prevState);
+    }
+   
+    const handleAdd = (e, product) => {
+        e.stopPropagation();
+
+        onAdd(product, 1);
     }
 
     return (
@@ -31,11 +40,11 @@ const AllProducts = ({ products }) => {
                 </div>
             </div>
             }
-            {products.length >= 1 && products.map(product => (
-                <Link href={`/product/${product.slug.current}`}>
+            {products.length >= 1 && products.map((product, i) => (
+                <Link key={i} href={`/product/${product.slug.current}`}>
                     <div className={styles.product}>
                         <div className={styles.product__imageContainer}> 
-                            <IoCartOutline className={styles.product__cartIcon} />
+                            <IoCartOutline onClick={(e) => handleAdd(e, product)} className={styles.product__cartIcon} />
                             <img className={styles.product__image} src={urlFor(product.image[0])} />
                         </div>  
                     <div className={styles.product__details}>

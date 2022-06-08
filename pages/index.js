@@ -4,7 +4,6 @@ import Bestsellers from '../components/Bestsellers/Bestsellers';
 import About from '../components/About/About'
 import Features from '../components/Features/Features';
 import Social from '../components/Social/Social';
-import Newsletter from '../components/Newsletter/Newsletter';
 
 export default function Home({bannerData, bestsellerProducts}) {
 
@@ -15,7 +14,6 @@ export default function Home({bannerData, bestsellerProducts}) {
         <Bestsellers products={bestsellerProducts} />
         <Features />
         <Social />
-
     </div>
   )
 }

@@ -70,9 +70,34 @@
     margin: 1rem 0 2rem;
 }
 
-@keyframes marquee {
-    0% { left: 0; }
-    100% { left: -100%; }
+.quantityDesc {
+    width: fit-content;
+    margin-bottom: 1rem;
+    border: .5px solid rgb(194, 194, 194);
+
+    &__minus {
+        padding: .6rem .8rem;
+        vertical-align: middle;
+        
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__number {
+        padding: .6rem 1rem;
+        border-right: .5px solid rgb(194, 194, 194);
+        border-left: .5px solid rgb(194, 194, 194);
+    }
+
+    &__plus {
+        padding: .6rem .8rem;
+        vertical-align: middle;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 

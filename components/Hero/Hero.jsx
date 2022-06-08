@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { urlFor } from "../../lib/client";
 import Button from "../Button/Button";
 import styles from './Hero.module.scss';
@@ -11,7 +12,9 @@ const Hero = ({ heroBannerData }) => {
                     <p className={styles.label}>{heroBannerData.label}</p>
                     <h1 className={styles.heading}>{heroBannerData.heading}</h1>
                     <p className={styles.body}>{heroBannerData.body}</p>
-                    <Button textButton={heroBannerData.textButton}/>
+                    <Link href={'/shop'} passHref>
+                        <Button textButton={heroBannerData.textButton}/>
+                    </Link>
                 </div>
                 <img className={styles.image} src={urlFor(heroBannerData.image)} />
             </div>
