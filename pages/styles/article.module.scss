@@ -1,0 +1,73 @@
+.article {
+    padding: 3rem 1rem;
+    color: #333;
+}
+
+.date {
+    color: #d3d3d3;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.225rem;
+}
+
+.title {
+    max-width: 80%;
+    margin-top: .5rem;
+    margin-bottom: 3rem;
+}
+
+.imageContainer {
+    height: 20rem;  
+    position: relative;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.category {
+    background-color: #fffbf8;
+    width: fit-content;
+    padding: .6rem 1.4rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.body {
+    line-height: 1.4rem;
+    margin: 2rem 0;
+}
+
+/* MEDIUM */
+  @media screen and (min-width: 48rem){
+   
+  }
+  
+  /* LARGE */
+  @media screen and (min-width: 64rem){
+    .article {
+        padding: 3rem 20%;
+    }
+
+    .title {
+        font-size: 2.25rem;
+    }
+
+    .imageContainer {
+        height: 40rem;  
+    }
+
+    .body {
+        line-height: 1.6rem;
+        margin: 3rem 0;
+    }
+  }
+
+
+  @media screen and (min-width: 87.5rem){
+    .article {
+        padding: 3rem 20%;
+    }
+}

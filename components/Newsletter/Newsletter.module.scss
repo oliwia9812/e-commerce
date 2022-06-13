@@ -5,6 +5,7 @@
 
 .content {
     text-align: center;
+    position: relative;
 
     & > h2 {
        margin: 0;
@@ -21,6 +22,8 @@
     align-items: center;
     margin-top: 2rem;
     padding: 0 1rem;
+    width: 100%;
+   
 
     .input {
         font-family: 'Cormorant Garamond', serif;
@@ -49,19 +52,36 @@
     }
 }
 
+.error {
+    color: red;
+    font-size: .875rem;
+    position: absolute;
+    bottom: -1.5rem;
+    left: 1rem;
+}
 
 @media screen and (min-width: 64rem) {
     .newsletter {
         padding: 5rem 0;
     }
+
     .form {
+        position: relative;
+        width: 25%;
+        padding: 0;
+        margin: 0 auto;
+        padding-top: 1rem;
+
         .input {
-            width: 20%;
             font-size: 1rem;
 
             &::placeholder {
                 font-size: 1rem;
             }
         }
+    }
+
+    .error {
+        left: 0;
     }
 }

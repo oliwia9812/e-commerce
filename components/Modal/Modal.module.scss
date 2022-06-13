@@ -1,0 +1,36 @@
+.lightModal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:0;
+    height: 10rem;
+    width: 100%;
+    z-index: 10;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.darkModal {
+    background-color: #333333;
+    position: relative;
+    bottom: 3rem;
+    z-index: 50;
+    height: 5rem;
+    padding: 1rem 0;
+
+    & > h2 {
+        color: white;
+        text-align: left;
+        margin-bottom: .5rem;
+    }
+
+}
+
+@media screen and (min-width: 64rem) {
+    .darkModal {
+        bottom: 4rem;
+        padding: 0;
+    }
+}

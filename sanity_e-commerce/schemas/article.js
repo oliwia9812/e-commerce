@@ -37,7 +37,7 @@ export default {
             type: 'date',
             title: 'dateCreated',
             options: {
-                dateFormat: 'YYYY-MM-DD'
+                dateFormat: 'DD MMMM YYYY'
             }
         }
     ]

@@ -18,7 +18,6 @@ const Cart = () => {
         return () => document.body.style.overflow = 'unset';
     }, [])
 
-    console.log(cartItems)
 
     return (
         <>

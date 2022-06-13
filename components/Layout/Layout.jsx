@@ -10,6 +10,8 @@ const Layout = ({ children }) => {
     return (
       <div className={styles.layout}>
         <Head>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0" />
+
             <title>Loomipaper - planners</title>
         </Head>
         <Navbar />

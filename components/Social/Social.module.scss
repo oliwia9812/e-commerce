@@ -10,29 +10,29 @@
 }
 
 .box {
-    background-color: rgb(153, 146, 146);
     width: 50%;
     margin: 0 5px;
     background-size: cover;
     background-repeat: no-repeat;
+    position: relative;
 
-    &1 {
+    &:nth-of-type(1) {
         background-image: url('../../assets/social_1.jpg');
         background-position: 0 50%;
     }
-    &2 {
+    &:nth-of-type(2) {
         background-image: url('../../assets/social_2.jpg');
         background-position: 0 50%;
     }
-    &3 {
+    &:nth-of-type(3) {
         background-image: url('../../assets/social_3.jpg');
         background-position: 0 50%;
     }
-    &4 {
+    &:nth-of-type(4) {
         background-image: url('../../assets/social_4.jpg');
         background-position: 0 50%;
     }
-    &5 {
+    &:nth-of-type(5) {
         background-image: url('../../assets/social_5.jpg');
         background-position: 0 50%;
     }
@@ -41,5 +41,28 @@
         content: "";
         display: block;
         padding-bottom: 100%;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__overlay {
+        background-color: rgba(30, 30, 30, 0.35);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    &__overlayIcon {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        color: white;
+        font-size: 2.4rem;
     }
 }
